@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{08C79682-CA43-489C-97A2-73AA96FB21C0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>stuScoreManager</RootNamespace>
+    <AssemblyName>stuScoreManager</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>bitbug_favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\ClassBLL.cs" />
+    <Compile Include="BLL\Class_CourseBLL.cs" />
+    <Compile Include="BLL\CourseBLL.cs" />
+    <Compile Include="BLL\ScoreBLL.cs" />
+    <Compile Include="BLL\StuBLL.cs" />
+    <Compile Include="BLL\UserBLL.cs" />
+    <Compile Include="ClassForm\ClassAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassForm\ClassAddForm.Designer.cs">
+      <DependentUpon>ClassAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassForm\ClassChangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassForm\ClassChangeForm.Designer.cs">
+      <DependentUpon>ClassChangeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassForm\ClassMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassForm\ClassMainForm.Designer.cs">
+      <DependentUpon>ClassMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseForm\CourseMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseForm\CourseMainForm.Designer.cs">
+      <DependentUpon>CourseMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseForm\SetClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseForm\SetClassForm.Designer.cs">
+      <DependentUpon>SetClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ClassDal.cs" />
+    <Compile Include="DAL\Class_CourseDal.cs" />
+    <Compile Include="DAL\CourseDal.cs" />
+    <Compile Include="DAL\ScoreDal.cs" />
+    <Compile Include="DAL\StuDal.cs" />
+    <Compile Include="DAL\UserDal.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\SQLHelper.cs" />
+    <Compile Include="Yanz\MD5Encryption.cs" />
+    <Compile Include="Model\ClassInfo.cs" />
+    <Compile Include="Model\Class_CourseInfo.cs" />
+    <Compile Include="Model\CourseInfo.cs" />
+    <Compile Include="Model\ScoreInfo.cs" />
+    <Compile Include="Model\StuInfo.cs" />
+    <Compile Include="Model\UserInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClassForm\ClassAddForm.resx">
+      <DependentUpon>ClassAddForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassForm\ClassChangeForm.resx">
+      <DependentUpon>ClassChangeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassForm\ClassMainForm.resx">
+      <DependentUpon>ClassMainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseForm\CourseMainForm.resx">
+      <DependentUpon>CourseMainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseForm\SetClassForm.resx">
+      <DependentUpon>SetClassForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScoreForm\rtScore.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rtScore.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScoreForm\rtScoreForm.resx">
+      <DependentUpon>rtScoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScoreForm\ScoreMainForm.resx">
+      <DependentUpon>ScoreMainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StuForm\StuAddForm.resx">
+      <DependentUpon>StuAddForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StuForm\StuChangeForm.resx">
+      <DependentUpon>StuChangeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StuForm\StuMainForm.resx">
+      <DependentUpon>StuMainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm\AddUserForm.resx">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm\ChangeUserForm.resx">
+      <DependentUpon>ChangeUserForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm\FindUserForm.resx">
+      <DependentUpon>FindUserForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm\RemoveUserForm.resx">
+      <DependentUpon>RemoveUserForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ScoreForm\dsScore.cs">
+      <DependentUpon>dsScore.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ScoreForm\dsScore.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsScore.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ScoreForm\rtScore.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rtScore.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ScoreForm\rtScoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScoreForm\rtScoreForm.Designer.cs">
+      <DependentUpon>rtScoreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScoreForm\ScoreMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScoreForm\ScoreMainForm.Designer.cs">
+      <DependentUpon>ScoreMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StuForm\StuAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StuForm\StuAddForm.Designer.cs">
+      <DependentUpon>StuAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StuForm\StuChangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StuForm\StuChangeForm.Designer.cs">
+      <DependentUpon>StuChangeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StuForm\StuMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StuForm\StuMainForm.Designer.cs">
+      <DependentUpon>StuMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm\AddUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm\AddUserForm.Designer.cs">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm\ChangeUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm\ChangeUserForm.Designer.cs">
+      <DependentUpon>ChangeUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm\FindUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm\FindUserForm.Designer.cs">
+      <DependentUpon>FindUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm\RemoveUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm\RemoveUserForm.Designer.cs">
+      <DependentUpon>RemoveUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yanz\VerificationCode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\Fate Wallpapers %2812%29.jpg" />
+    <None Include="ScoreForm\dsScore.xsc">
+      <DependentUpon>dsScore.xsd</DependentUpon>
+    </None>
+    <None Include="ScoreForm\dsScore.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsScore.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ScoreForm\dsScore.xss">
+      <DependentUpon>dsScore.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bitbug_favicon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
